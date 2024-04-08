@@ -1,0 +1,22 @@
+.card{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    padding: 20px 50px;
+    margin: 20px auto;
+    background:#f4ffff;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+
+    & label{
+        display: block;
+        text-align: left;
+    }
+    & button{
+        padding: 7px;
+        font-size: large;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+.session{
+
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+
+    &>.header{
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        &> button{
+            font-size: large;
+            padding: 10px;
+        }
+    }
+
+    &>.body{
+
+    }
+}
