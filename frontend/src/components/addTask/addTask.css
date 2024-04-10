@@ -1,0 +1,43 @@
+.add-task {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+    &>.left {
+        display: flex;
+
+        &>span {
+            border-radius: 50%;
+            margin: 3px;
+            width: 10px;
+            height: 10px;
+        }
+
+        &>.red {
+            background: #FC8FA6;
+        }
+
+        &>.yellow {
+            background: #33D3F2;
+        }
+
+        &>.blue {
+            background: #FAC103;
+        }
+    }
+
+    &>.center {
+        flex-grow: 1;
+        
+        &>input {
+            font-size: large;
+            width: 100%;
+        }
+    }
+
+    &>.right {}
+}

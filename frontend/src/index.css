@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,78 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --purple: #A18AFF;
+  color: #4a4a4a;
+}
+
+a{
+  all:unset;
+}
+
+h1, h2, h3, h4, h5, h6{
+  padding: unset;
+  margin: unset;
+
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  border: none;
+  outline: none;
+  background-color: #ffffff08;
+  padding: 15px;
+  margin: 5px 0px;
+  color: #333;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+  resize: none;
+
+  &:hover {
+    background-color: #ffffff10;
+  }
+
+  &:focus {
+    background-color: #ffffff20;
+  }
+}
+
+button {
+  all: unset;
+  padding: 10px 20px;
+  margin: 3px 5px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #777;
+  user-select: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s linear;
+  transition: color 0.1s linear;
+
+  &:hover {
+    background-color: #ddd;
+    color: #555;
+  }
+
+  &:active {
+    box-shadow: rgb(128, 150, 170) 3px 3px 6px 0px inset, rgba(175, 175, 175, 0.5) -3px -3px 6px 1px inset;
+    scale: 0.9;
+    transition: all 0.1s ease-in;
+  }
+
+  &.btn-primary {
+    background-color: #0856d3;
+
+    &:hover {
+      background-color: #1561db;
+    }
+  }
+
 }

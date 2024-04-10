@@ -1,24 +1,14 @@
-.session{
+.session {
 
     display: flex;
-    flex-direction: column;
-    width: 100vh;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    --nav-width: 250px;
 
-    &>.header{
-        background-color: aliceblue;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
 
-        &> button{
-            font-size: large;
-            padding: 10px;
-        }
+    &>.navbar {
+        min-width: var(--nav-width);
     }
 
-    &>.body{
-
-    }
 }

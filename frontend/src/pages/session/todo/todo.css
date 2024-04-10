@@ -1,0 +1,39 @@
+
+.todo {
+    background-color: var(--purple);
+    width: calc(100vw - var(--nav-width));
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: #fff;
+    padding: 20px 50px;
+
+    &>.content {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        flex-grow: 1;
+        height: 100%;
+
+        &>.section-1 {
+            margin-bottom: 30px;
+
+            &>.title {
+
+                color: #fffd;
+            }
+
+            &>.task-list-heading {
+                font-size: 2em;
+                font-weight: bolder;
+                color: #fff;
+            }
+        }
+
+
+        &>.task-list {
+            overflow-y: auto;
+        }
+    }
+
+}

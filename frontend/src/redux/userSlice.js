@@ -22,6 +22,7 @@ export const userSlice = createSlice({
         logOutUser : (state)=>{
             state.isLoggedIn = false
             state.userData.email = null
+            state.userData.name = null
             state.userData.accessToken = null
         }
     }

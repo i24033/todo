@@ -1,0 +1,17 @@
+.page-not-found{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &>a{
+        color: blue;
+        cursor: pointer;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

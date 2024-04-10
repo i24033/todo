@@ -19,8 +19,9 @@ export default function Register() {
 
   async function handleRegister() {
     try {
-      await app.service("authentication").create(userData);
-      window.alert("register success?")
+      console.log(userData)
+      await app.service("users").create(userData);
+      window.alert("user registered successfully")
     } catch (err) {
       window.alert("error occured when trying to login. check console");
       console.log("authentication err", err);

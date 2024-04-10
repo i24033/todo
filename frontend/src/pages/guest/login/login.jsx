@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Card from "../../../components/card/card";
 import { useDispatch } from "react-redux";
 import { logInUser, logOutUser } from "../../../redux/userSlice";
-import app from "@/feathers.js"
+import feathersApp from "@/feathers.js"
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
     strategy: "local",
@@ -24,11 +27,21 @@ export default function Login() {
 
   async function handleRegister() {
     try {
-      await app.authenticate(userData);
-      window.alert("login success?")
+      
+      const response = await feathersApp.authenticate(userData);
+      
+      dispatch(logInUser({
+        name:response.user.name,
+        email : response.user.email,
+        accessToken : response.accessToken
+      }))
+      navigate("/")
+
     } catch (err) {
+      
       window.alert("error occured when trying to login. check console");
       console.log("authentication err", err);
+      dispatch( logOutUser() )
     }
   }
   return (
